@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>ToDo List</title>
+  <link rel="stylesheet" href="./css/main.css">
+  <script src="./js/bundle.js"></script>
+</head>
+<body>
+  <div id="app" class="container">
+    <h1>ToDo's</h1>
+    <form class="form" v-on:submit.prevent="saveNewTodoList">
+      <div class="form__item form__item--add">
+        <input id="new-todo" type="text" v-model="newList.name" required>
+      </div>
+
+      <div class="form__item">
+        <label for="high-priority">High</label>
+        <input type="radio" name="new-priority" value="high" v-model="newList.priority" required>
+
+        <label for="low-priority">Low</label>
+        <input type="radio" name="new-priority" value="low" v-model="newList.priority" required>
+      </div>
+
+      <div class="form__item">
+        <input class="btn btn--primary" type="submit" value="Save Item">
+      </div>
+    </form>
+    <ul class="todos-list">
+      <li class="todos-list__item" v-for="todo in todos" v-bind:class="todo.priority">
+        {{todo.name}}
+      </li>
+    </ul>
+  </div>
+</body>
+</html>

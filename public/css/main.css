@@ -1,0 +1,61 @@
+body {
+  font-family: Helvetica, sans-serif;
+}
+
+ .container {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.form__item {
+  display: inline-block;
+  margin: 10px 10px 10px 0px;
+}
+
+.form__item--add {
+  max-width: 300px;
+  width: 100%;
+}
+
+.form__item--add input {
+  width: 100%;
+  height: 30px;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.todos-list__item {
+  padding: 10px;
+  border: 2px solid black;
+  margin: 20px 0;
+  animation: fadeIn 1s linear;
+}
+
+.btn {
+  padding: 7px;
+  transition: 0.5s;
+}
+
+.btn--primary {
+  background-color: black;
+  color: white;
+  border: 1px solid black;
+}
+
+.btn--primary:hover {
+  color: black;
+  background-color: white;
+}
+
+.todos-list {
+  list-style-type: none;
+  padding-left: 0px;
+}
+
+.high {
+  border-color: red;
+}
+
+.low {
+  border-color: green;
+}
